@@ -1,6 +1,6 @@
 const cakes = (recipe, available) => {
   const numberOfCakes = []
-  let lowerValue = null
+  let lowestValue = null
   const entriesRecipe = Object.entries(recipe)
   const entriesAvailable = Object.entries(available)
 
@@ -15,12 +15,12 @@ const cakes = (recipe, available) => {
   })
 
   numberOfCakes.forEach( e => {
-    if ((lowerValue === null) || (lowerValue > e)) {
-      lowerValue = e
+    if ((lowestValue === null) || (lowestValue > e)) {
+      lowestValue = e
     }
   })
   
-  console.log(lowerValue)
+  console.log(lowestValue)
 }
 
 const recipe = {
@@ -37,7 +37,7 @@ const available = {
 }
 
 const recipe2 = {
-  "macas": 3,
+  "apple": 3,
   "flour": 300,
   "sugar": 150,
   "milk": 100,
